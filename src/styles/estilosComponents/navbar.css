@@ -1,0 +1,193 @@
+/* ─── Navbar Principal ───────────────────────────────── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(15, 8, 28, 0.75); /* Fondo oscuro con tono morado muy sutil */
+  border-bottom: 1px solid rgba(147, 51, 234, 0.25); /* Borde neón apagado */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logoName {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.play {
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+  letter-spacing: 0.5px;
+}
+
+.block-2 {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* ─── Botones de Acceso (Invitado) ─────────────────── */
+.action-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-registrar {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(147, 51, 234, 0.1);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  border-radius: 6px;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navbar-registrar:hover {
+  background: rgba(147, 51, 234, 0.25);
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
+  color: #ffffff;
+}
+
+.navbar-login {
+  font-size: 12px;
+  color: #ffffff;
+  background: #a855f7;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+  transition: all 0.2s;
+}
+
+.navbar-login:hover {
+  background: #b55fe6;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.6);
+}
+
+/* ─── El Contenedor del Avatar y Dropdown ────────────── */
+.perfil-desplegable-container {
+  position: relative;
+}
+
+/* Círculo del Avatar Vibrante */
+.avatar-inicial {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a855f7, #0066ff); /* Morado a Azul */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.avatar-inicial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
+  border-color: rgba(0, 102, 255, 0.4);
+}
+
+/* Tarjeta Flotante */
+.menu-desplegable {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 220px;
+  background: rgba(20, 11, 36, 0.95); /* Fondo ultra oscuro morado */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(168, 85, 247, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  z-index: 200;
+  animation: dropdownSlideDown 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes dropdownSlideDown {
+  from { opacity: 0; transform: translateY(-10px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Cabecera interna del menú */
+.info-usuario-desplegable {
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.usuario-nombre-completo {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.usuario-id-tag {
+  font-size: 11px;
+  color: #a78bfa;
+  opacity: 0.8;
+}
+
+.divisor-menu {
+  border: 0;
+  height: 1px;
+  background: rgba(168, 85, 247, 0.2);
+  margin: 6px 0;
+}
+
+/* Opciones internas del menú */
+.opcion-menu {
+  font-size: 12.5px;
+  padding: 10px 16px;
+  color: rgba(226, 217, 243, 0.8);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+
+.opcion-menu:hover {
+  background: rgba(168, 85, 247, 0.15);
+  color: #ffffff;
+  padding-left: 20px; /* Efecto sutil de desplazamiento al pasar el mouse */
+}
+
+/* Botón de cerrar sesión */
+.opcion-menu.cerrar-sesion {
+  color: #fca5a5;
+  border-top: 1px solid rgba(168, 85, 247, 0.15);
+  margin-top: 6px;
+  padding-top: 12px;
+}
+
+.opcion-menu.cerrar-sesion:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}

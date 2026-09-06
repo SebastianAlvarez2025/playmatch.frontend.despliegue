@@ -1,0 +1,171 @@
+/* EncuentrosJugador.module.css */
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.tituloPrincipal {
+  font-size: 1.8rem;
+  color: #1f2937;
+  font-weight: 800;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.seccionJornada {
+  margin-bottom: 32px;
+}
+
+.tituloJornada {
+  font-size: 1.25rem;
+  color: #374151;
+  font-weight: 700;
+  border-left: 4px solid #2563eb;
+  padding-left: 12px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.listaPartidos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.encuentroCard {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 18px 24px;
+  display: grid;
+  grid-template-columns: 120px 1fr 100px 110px;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.encuentroCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.infoTemporal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fecha {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.hora {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.bloqueCentral {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.marcador {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.equipo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  flex: 1;
+}
+
+.local {
+  text-align: right;
+}
+
+.visitante {
+  text-align: left;
+}
+
+.vs {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #9ca3af;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.lugar {
+  font-size: 0.8rem;
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+}
+
+.estadoBadge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pendiente { background-color: #fef3c7; color: #d97706; }
+.jugando { background-color: #dbeafe; color: #2563eb; }
+.finalizado { background-color: #e5e7eb; color: #374151; }
+.aplazado { background-color: #fee2e2; color: #ef4444; }
+
+.sinDatosContainer {
+  text-align: center;
+  padding: 40px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.sinDatosTexto {
+  color: #6b7280;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Responsive para Móviles */
+@media (max-width: 640px) {
+  .encuentroCard {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 20px;
+    gap: 12px;
+  }
+  
+  .infoTemporal {
+    align-items: center;
+  }
+
+  .marcador {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .equipo {
+    text-align: center;
+  }
+}

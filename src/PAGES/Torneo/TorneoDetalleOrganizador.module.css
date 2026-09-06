@@ -1,0 +1,126 @@
+/* TorneoDetalleOrganizador.module.css */
+.detalleContainer {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detalleHeader {
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  margin-bottom: 24px;
+
+  background-color: #1a0b2e; /* Morado ultra oscuro */
+  font-weight: 600;
+  border-bottom: 2px solid rgba(147, 51, 234, 0.3);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.detalleHeader h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.dataDetalle {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.imageContainer img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.torneoSubtitulo {
+  font-weight: 600;
+  color: #a78bfa;
+}
+
+/* Navegación por pestañas exclusivas del Organizador */
+.detalleNav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 0;
+  margin-top: 16px;
+  flex-wrap: wrap; /* Por si se acumulan muchas pestañas en pantallas chicas */
+}
+
+.detalleNav button {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 0.99rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+  text-transform: capitalize; /* Convierte 'equipos' a 'Equipos' visualmente */
+}
+
+.detalleNav button:hover {
+  color: #1f2937;
+}
+
+.detalleNav button.activeTab {
+  color: #059669; /* Verde esmeralda para diferenciar el panel del organizador */
+  font-weight: 600;
+}
+
+.detalleNav button.activeTab::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #059669;
+}
+
+/* Área de contenido */
+.detalleMain {
+  background-color: rgba(35, 18, 60, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  min-height: 300px;
+}
+
+.loadingText,
+.errorText,
+.notFoundText {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+}
+
+.errorText {
+  color: #ef4444;
+  font-weight: 500;
+}

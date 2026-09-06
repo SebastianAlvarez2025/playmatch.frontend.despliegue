@@ -1,0 +1,108 @@
+/* ==========================================================
+   "EQUIPOS INSCRITOS AL TORNEO" (vista del
+   Organizador). 
+   ========================================================== */
+
+.inscripciones-organizador-page {
+  padding: 30px 40px;
+  color: #ffffff;
+}
+
+.inscripciones-organizador-page h1 {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.inscripciones-organizador-page > p {
+  color: #c8c8e0;
+  font-size: 15px;
+}
+
+.inscripciones-organizador-page p.error {
+  color: #ff6b6b;
+}
+
+/* Contenedor de la tabla, como una tarjeta */
+.inscripciones-organizador-page .tabla-inscripciones {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #22223a;
+  border: 1px solid #3a3a55;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.inscripciones-organizador-page .tabla-inscripciones thead th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #7d9bc4;
+  padding: 14px 16px;
+  border-bottom: 2px solid #3a3a55;
+  background-color: #1c1c33;
+}
+
+.inscripciones-organizador-page .tabla-inscripciones tbody td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #e0e0f0;
+  border-bottom: 1px solid #2c2c48;
+}
+
+.inscripciones-organizador-page .tabla-inscripciones tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.inscripciones-organizador-page .tabla-inscripciones tbody tr:hover {
+  background-color: rgba(90, 155, 216, 0.05);
+}
+
+/* Badges de estado  */
+.inscripciones-organizador-page .estado-pendiente,
+.inscripciones-organizador-page .estado-inscrito,
+.inscripciones-organizador-page .estado-cancelado {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.inscripciones-organizador-page .estado-pendiente {
+  background-color: rgba(216, 178, 90, 0.15);
+  color: #e0c07a;
+  border: 1px solid rgba(216, 178, 90, 0.4);
+}
+
+.inscripciones-organizador-page .estado-inscrito {
+  background-color: rgba(90, 200, 130, 0.15);
+  color: #7ad8a0;
+  border: 1px solid rgba(90, 200, 130, 0.4);
+}
+
+.inscripciones-organizador-page .estado-cancelado {
+  background-color: rgba(214, 107, 107, 0.15);
+  color: #ff9d9d;
+  border: 1px solid rgba(214, 107, 107, 0.4);
+}
+
+/* Link "Gestionar" */
+.inscripciones-organizador-page .tabla-inscripciones td a {
+  background-color: rgba(90, 155, 216, 0.12);
+  border: 1px solid rgba(90, 155, 216, 0.4);
+  color: #8ab4e0;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.inscripciones-organizador-page .tabla-inscripciones td a:hover {
+  background-color: rgba(90, 155, 216, 0.25);
+  border-color: #5a9bd8;
+  color: #ffffff;
+}

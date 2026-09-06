@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  display: flex;
+  width: 1380px;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(0, 63, 39), rgb(1, 122, 76));
+  color: white;
+  padding: 10px;
+  margin-left: 55px;
+  border-radius: 10px;
+}
+
+.contenedor-cancha {
+  display: flex;
+  flex-direction: row;
+}
+
+.marcador {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.escudo {
+  text-align: center;
+  cursor: pointer;
+}
+
+.escudo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.cancha {
+  width: 990px;
+  height: 650px;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.mitad {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 5px;
+}
+
+/******************Delanteros***************************************/
+.delantero-izq-2,
+.delantero-der-2 {
+  margin-right: -50px;
+}
+
+.delantero-izq,
+.delantero-der {
+  margin-left: -50px;
+}
+
+.delantero-der,
+.delantero-der-2 {
+  margin-bottom: 30px;
+}
+
+.delantero-izq,
+.delantero-izq-2 {
+  margin-top: 30px;
+}
+
+.delantero-centro {
+  margin-top: -90px;
+  margin-bottom: -90px;
+}
+
+.delantero-centro-doble {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+/*********************************************************/
+
+/****************mediocampista********************************************/
+
+.mcc,
+.mcc-2 {
+  margin-top: -110px;
+  margin-bottom: -110px;
+}
+
+.mcc {
+  margin-right: -10px;
+}
+
+.mcc-2 {
+  margin-left: -10px;
+}
+
+.mcd,
+.mci {
+  margin-left: -20px;
+}
+
+.mcd-2,
+.mci-2 {
+  margin-right: -20px;
+}
+/*********************************************************/
+
+/******************pivotes***************************************/
+
+.pc,
+.pc-2 {
+  margin-bottom: -350px;
+  margin-top: -350px;
+}
+
+.pc-2 {
+  margin-left: -50px;
+}
+
+.pc {
+  margin-right: -50px;
+}
+
+.pd,
+.pi {
+  margin-left: -40px;
+}
+
+.pd-2,
+.pi-2 {
+  margin-right: -40px;
+}
+/*********************************************************/
+
+/****************Defensa********************************************/
+
+.lateral-izquierdo {
+  margin-left: -80px;
+  margin-bottom: 40px;
+}
+.lateral-derecho {
+  margin-left: -80px;
+  margin-top: 35px;
+}
+.lateral-derecho-2 {
+  margin-right: -80px;
+  margin-top: 40px;
+}
+.lateral-izquierdo-2 {
+  margin-right: -80px;
+  margin-bottom: 35px;
+}
+.dfc-2 {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.dfc {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.dfc-3 {
+  margin-left: -20px;
+}
+.dfc {
+  margin-right: -20px;
+}
+
+/*********************************************************/
+.numero {
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
+
+.n-camiseta {
+  font-size: 25px;
+}
+
+.cajita {
+  display: flex;
+  flex-direction: column;
+}
+
+.pos {
+  font-weight: 300;
+  font-size: 15px;
+  color: #0400ff;
+}
+
+.portero.ocupado-local,
+.defensa.ocupado-local,
+.pivotes.ocupado-local,
+.mediocampista.ocupado-local,
+.delantero.ocupado-local {
+  background: blue;
+  color: white;
+  border: 1px solid blue;
+  font-weight: bold;
+  cursor: grab;
+}
+
+.portero.ocupado-visitante,
+.defensa.ocupado-visitante,
+.pivotes.ocupado-visitante,
+.mediocampista.ocupado-visitante,
+.delantero.ocupado-visitante {
+  background: red;
+  color: white;
+  border: 1px solid red;
+  font-weight: bold;
+  cursor: grab;
+}
+
+/*********************************************************/
+.zona-portero,
+.zona-defensa,
+.zona-pivotes,
+.zona-mediocampista,
+.zona-delanteros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.portero,
+.defensa,
+.pivotes,
+.mediocampista,
+.delantero {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid rgba(9, 0, 0, 0.56);
+  background: rgba(9, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  transform: translateX(0px);
+}
+/*********************************************************/
+
+/* Banca */
+.banca {
+  width: 340px;
+  height: 650px;
+  padding: 8px;
+  background: #2b2b2b;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.btn-cerrar {
+  display: flex;
+  margin-left: auto;
+}
+
+.text-banca {
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+.cerrar-banca {
+  width: 35px;
+  height: 35px;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.visitante-banca {
+  border-radius: 12px;
+  border: 4px solid red;
+}
+
+.local-banca {
+  border-radius: 12px;
+  border: 4px solid blue;
+}
+
+.banca h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.lista-jugadores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.jugador-banca {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: grab;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.jugador-banca:active {
+  cursor: grabbing;
+  transform: scale(0.8);
+}
+
+.btn-l {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  z-index: 100;
+}
+
+.btn-eliminar-jugador {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contenedor-posicion {
+  position: relative;
+  display: inline-block;
+}
+
+.local {
+  border: 4px solid blue;
+  border-right: none;
+  margin-top: 6px;
+  margin-bottom: 7px;
+  margin-left: 5px;
+}
+
+.visitante {
+  border: 4px solid red;
+  border-left: none;
+  margin-top: 6px;
+  margin-bottom: 7px;
+  margin-right: 4px;
+}
+
+.container-guardar-alineaciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-local {
+  background-color: #0400ff;
+  width: 180px;
+  height: 35px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-visitante {
+  background-color: red;
+  width: 180px;
+  height: 35px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.container-cancha-banca {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-cronologia {
+  width: 90px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(3, 90, 3);
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 450px;
+}

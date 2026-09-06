@@ -1,0 +1,555 @@
+/* ==========================================================================
+   LAYOUT Y CABECERA DEL TORNEO
+   ========================================================================== */
+.container {
+  padding: 24px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.headerTorneo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.headerTorneo h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+}
+
+.badgeCategoria {
+  background-color: rgba(15, 8, 28, 0.65);
+  color: #a855f7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(147, 51, 234, 0.4);
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.2);
+}
+
+/* ==========================================================================
+   BARRA DE CONTROLES SUPERIOR
+   ========================================================================== */
+.headerTabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  background: rgba(25, 12, 44, 0.4);
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(6px);
+}
+
+.selectorVista {
+  display: flex;
+  gap: 8px;
+  background-color: rgba(15, 8, 28, 0.65);
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+}
+
+.btnToggle {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnToggle.activo {
+  background-color: #9333ea;
+  color: #ffffff;
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.5);
+}
+
+.accionesHeader {
+  display: flex;
+  gap: 12px;
+}
+
+.btnAccion {
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease, transform 0.1s;
+}
+
+.btnAccion:active {
+  transform: scale(0.98);
+}
+
+.btnCrearAuto {
+  background-color: #10b981;
+  color: white;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
+.btnCrearAuto:hover {
+  background-color: #059669;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+}
+
+.btnCrearAuto:disabled {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btnCrearManual {
+  background-color: #9333ea;
+  color: white;
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.4);
+}
+
+.btnCrearManual:hover {
+  background-color: #a855f7;
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.6);
+}
+
+/* ==========================================================================
+   VISTA 1: POR JORNADAS (LISTA Y TARJETAS)
+   ========================================================================== */
+.contenedorJornada {
+  margin-bottom: 36px;
+}
+
+.tituloJornada {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 700;
+  border-left: 4px solid #a855f7;
+  padding-left: 12px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+}
+
+.listaPartidos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.encuentroCard {
+  background: rgba(25, 12, 44, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 110px 1fr 90px 110px auto;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+}
+
+.encuentroCard:hover {
+  border-color: #a855f7;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+  background: rgba(25, 12, 44, 0.65);
+}
+
+.fecha {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.infoPartido {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.marcador {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.equipo {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.vs {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a855f7;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgba(168, 85, 247, 0.5);
+}
+
+.lugar {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hora {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+/* Badges de Estado */
+.estadoBadge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  width: fit-content;
+  border: 1px solid transparent;
+}
+
+.pendiente { 
+  background-color: rgba(217, 119, 6, 0.2); 
+  color: #f59e0b; 
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.jugando { 
+  background-color: rgba(37, 99, 235, 0.2); 
+  color: #60a5fa; 
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+.finalizado { 
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: rgba(255, 255, 255, 0.6); 
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.aplazado { 
+  background-color: rgba(239, 68, 68, 0.2); 
+  color: #f87171; 
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+/* Botones de Acción Mini */
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.btnMini {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btnEditar {
+  background-color: rgba(147, 51, 234, 0.2);
+  color: #c084fc;
+  border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.btnEditar:hover {
+  background-color: #9333ea;
+  color: #ffffff;
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.5);
+}
+
+.btnEliminar {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.btnEliminar:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+/* ==========================================================================
+   VISTA 2: AGENDA / CALENDARIO
+   ========================================================================== */
+.calendarioGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bloqueFecha {
+  background: rgba(25, 12, 44, 0.4);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(6px);
+}
+
+.tituloFecha {
+  font-size: 1.05rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+  padding-bottom: 8px;
+  text-shadow: 0 0 6px rgba(147, 51, 234, 0.4);
+}
+
+.partidosDia {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemCalendario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background-color: rgba(15, 8, 28, 0.65);
+  border: 1px solid rgba(147, 51, 234, 0.15);
+  border-radius: 6px;
+  font-size: 0.88rem;
+  transition: border-color 0.2s ease;
+}
+
+.itemCalendario:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.horaCal {
+  font-weight: 600;
+  color: #a855f7;
+  width: 60px;
+}
+
+.enfrentamientoCal {
+  color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+}
+
+.canchaCal {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  margin-right: 12px;
+}
+
+.btnEditarCal {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btnEditarCal:hover {
+  color: #a855f7;
+  text-shadow: 0 0 6px rgba(168, 85, 247, 0.5);
+}
+
+/* ==========================================================================
+   MODAL PARA PROGRAMAR ENCUENTRO
+   ========================================================================== */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 5, 20, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: rgba(25, 12, 44, 0.95);
+  padding: 28px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid rgba(147, 51, 234, 0.4);
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.3);
+}
+
+.modalContent h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(147, 51, 234, 0.5);
+}
+
+.formModal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: rgba(15, 8, 28, 0.65);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  font-size: 0.9rem;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: #a855f7;
+  background: rgba(25, 12, 44, 0.85);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.formGroup option {
+  background-color: #190c2c;
+  color: #ffffff;
+}
+
+.formRow {
+  display: flex;
+  gap: 12px;
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.modalAcciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btnCancelar {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnCancelar:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.btnGuardar {
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #9333ea;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btnGuardar:hover {
+  background-color: #a855f7;
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.6);
+}
+
+.btnGuardar:disabled {
+  background-color: rgba(147, 51, 234, 0.3);
+  color: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   ESTADOS VACÍOS Y RESPONSIVE
+   ========================================================================== */
+.sinDatos {
+  text-align: center;
+  padding: 48px;
+  background: rgba(15, 8, 28, 0.4);
+  border-radius: 10px;
+  border: 1px dashed rgba(147, 51, 234, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .headerTabla {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .accionesHeader {
+    flex-direction: column;
+  }
+
+  .encuentroCard {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .marcador {
+    justify-content: center;
+  }
+
+  .estadoBadge {
+    margin: 0 auto;
+  }
+
+  .acciones {
+    justify-content: center;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,208 @@
+.veedor-container {
+  padding: 30px;
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fa;
+  box-sizing: border-box;
+}
+
+.veedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.veedor-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.veedor-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.btn-recargar {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-recargar:hover {
+  background: #1d4ed8;
+}
+
+.encuentros-veedor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.encuentro-veedor-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.encuentro-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.torneo-nombre {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.estado {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.estado-finalizado {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.encuentro-equipos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.equipo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.equipo-nombre {
+  font-weight: 700;
+  color: #111827;
+}
+
+.vs {
+  font-weight: bold;
+  color: #9ca3af;
+}
+
+.marcador {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.encuentro-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.encuentro-info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.encuentro-info strong {
+  color: #374151;
+  font-size: 13px;
+}
+
+.encuentro-info span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.btn-ver-encuentro {
+  width: 100%;
+  margin-top: 18px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-ver-encuentro:hover {
+  background: #374151;
+}
+
+.veedor-loading {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  color: #6b7280;
+}
+
+.veedor-empty {
+  background: white;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.veedor-empty-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.veedor-empty h2 {
+  margin: 0 0 10px;
+  color: #374151;
+}
+
+.veedor-empty p {
+  color: #6b7280;
+}
+
+.veedor-error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+  .veedor-container {
+    padding: 20px;
+  }
+
+  .veedor-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .encuentros-veedor-grid {
+    grid-template-columns: 1fr;
+  }
+}

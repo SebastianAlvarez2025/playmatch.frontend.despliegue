@@ -1,0 +1,274 @@
+/* ===========================
+   CONTENEDOR (Optimizado para el nuevo Layout)
+=========================== */
+.registro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  min-height: 100%; 
+  width: 100%;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(circle at top right, #7b2ff71e, transparent 35%),
+    radial-gradient(circle at bottom left, #3f8cff1c, transparent 30%),
+    #090012f5;
+}
+
+/* ===========================
+   TARJETA (Compacta y estilizada)
+=========================== */
+.card-registrar {
+  width: 100%;
+  max-width: 480px; /* Reducido de 700px para que no sea gigante */
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .06);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid #3b1455;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+
+  animation: aparecer .5s ease;
+  font-style: italic;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1rem; /* 🛠️ Corregido el bug de los 3rem */
+}
+
+.card-registrar h3 {
+  color: white;
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #cfcfcf;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-size: 13.5px;
+}
+
+/* ===========================
+   ESTRUCTURA DEL FORMULARIO
+=========================== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px; /* Espaciado interno más cerrado */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-full {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   LABELS & INPUTS
+=========================== */
+.form-label {
+  display: block;
+  color: #D8D8D8;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  font-size: .88rem;
+}
+
+.form-control,
+.opciones_documento,
+.opciones_rol,
+.password-control {
+  width: 100%;
+  padding: 10px 14px; /* Inputs menos altos */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  background: rgba(255, 255, 255, .07);
+  color: white;
+  outline: none;
+  transition: .25s;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-control::placeholder {
+  color: #bdbdbd;
+}
+
+.form-control:focus,
+.opciones_documento:focus,
+.opciones_rol:focus,
+.password-control:focus {
+  border-color: #7B2FF7;
+  box-shadow: 0 0 15px rgba(123, 47, 247, .45);
+  background: rgba(255, 255, 255, .10);
+}
+
+/* ===========================
+   SELECTS
+=========================== */
+.opciones_documento option,
+.opciones_rol option {
+  background: #16102a;
+  color: white;
+}
+
+/* ===========================
+   CONTRASEÑA & VALIDACIONES
+=========================== */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  position: relative;
+  width: 100%;
+}
+
+.password-control {
+  padding-right: 45px; /* Evita que el texto tape el ojo */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%; /* Centrado vertical correcto */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9c7dff;
+  font-size: 18px;
+  transition: .2s;
+}
+
+.toggle-password:hover {
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* Tarjeta flotante de requisitos */
+.password-card {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 290px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(18, 12, 34, .98);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(123, 47, 247, .4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .45);
+  z-index: 999;
+  animation: fade .2s ease;
+}
+
+.password-card h4 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.password-card p {
+  margin: 6px 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.✔ { color: #3edb82; }
+.✖ { color: #ff7070; }
+
+/* ===========================
+   BOTÓN PRINCIPAL
+=========================== */
+.btn-main {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  background:#8e3db5; 
+  transition: .25s;
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(123, 47, 247, .45);
+}
+
+/* ===========================
+   TEXTOS, ERRORES Y LINKS
+=========================== */
+.link-text {
+  text-align: center;
+  margin-top: 16px;
+  color:#dfb2f4;
+  cursor: pointer;
+  transition: .2s;
+  font-size: 14px;
+}
+
+.link-text:hover {
+  color: #9B5CFF;
+}
+
+.error, .password-error {
+  color: #ff7c7c;
+  margin-top: 6px;
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+/* ===========================
+   ANIMACIONES & MEDIA QUERIES
+=========================== */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width: 1200px) {
+  .password-card {
+    position: relative;
+    left: 0;
+    top: 8px;
+    width: 100%;
+    box-shadow: none;
+  }
+}

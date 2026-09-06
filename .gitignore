@@ -1,0 +1,48 @@
+# ==========================================
+# DEPENDENCIAS (No se suben jamás)
+# ==========================================
+**/node_modules/
+.pnpm-store/
+.yarn/
+dist/
+dist-ssr/
+
+# ==========================================
+# SEGURIDAD Y ENTORNO (No se suben, son locales)
+# ==========================================
+.env
+.env.local
+.env.*.local
+
+# ==========================================
+# LOGS Y TEMPORALES
+# ==========================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.local
+.DS_Store
+
+# ==========================================
+# CONFIGURACIÓN DE EDITORES
+# ==========================================
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

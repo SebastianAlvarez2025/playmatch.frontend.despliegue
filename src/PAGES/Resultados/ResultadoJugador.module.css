@@ -1,0 +1,114 @@
+/* ResultadoJugador.module.css */
+.container {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subtitulo {
+  color: #6b7280;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.encuentroBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.partidoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.bando {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nombreEquipo {
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.vsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.vsText {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.marcadorBox {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 8px;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.noData {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  color: #6b7280;
+  border: 1px dashed #d1d5db;
+}

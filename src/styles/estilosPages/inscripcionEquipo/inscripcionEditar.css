@@ -1,0 +1,166 @@
+/* ==========================================================
+    GESTIONAR INSCRIPCIÓN (Vista del Organizador)
+    RF-006.3 Gestionar Estado de Inscripción
+  
+   ========================================================== */
+
+/* Fondo general de la página */
+.inscripcion-editar-page {
+  min-height: 100vh;
+  background-color: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+}
+
+/* Tarjeta central que contiene toda la información */
+.inscripcion-editar-tarjeta {
+  background-color: #22223a;
+  border: 1px solid #3a3a55;
+  border-radius: 10px;
+  padding: 32px 36px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Título principal con línea  */
+.inscripcion-editar-tarjeta h1 {
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 12px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #366091;
+}
+
+/* Contenedor de los datos (equipo, torneo, estado) */
+.ie-datos {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ie-datos p {
+  color: #cfcfe0;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.ie-etiqueta {
+  color: #9a9ac0;
+}
+
+.ie-datos strong {
+  color: #ffffff;
+}
+
+/* Badge de estado, */
+.ie-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.ie-badge-pendiente {
+  background-color: rgba(216, 178, 90, 0.15);
+  color: #e0c07a;
+  border: 1px solid #d8b25a;
+}
+
+.ie-badge-inscrito {
+  background-color: rgba(122, 216, 160, 0.15);
+  color: #7ad8a0;
+  border: 1px solid #7ad8a0;
+}
+
+.ie-badge-cancelado {
+  background-color: rgba(161, 58, 58, 0.15);
+  color: #ff8787;
+  border: 1px solid #a13a3a;
+}
+
+/* Botones de acción, en fila */
+.ie-acciones {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.ie-acciones button {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.ie-acciones button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Botón Aprobar: acción positiva, dorado, igual que .btn-inscribir */
+.btn-aprobar {
+  background-color: #d8b25a;
+  color: #1a1a2e;
+}
+
+.btn-aprobar:hover:not(:disabled) {
+  background-color: #e0c07a;
+}
+
+/* Botón Cancelar: acción destructiva, rojo, igual que .btn-desactivar */
+.btn-cancelar-inscripcion {
+  background-color: #a13a3a;
+  color: #ffffff;
+}
+
+.btn-cancelar-inscripcion:hover:not(:disabled) {
+  background-color: #ff8787;
+  color: #1a1a2e;
+}
+
+/* Mensaje cuando la inscripción ya fue gestionada antes */
+.ie-ya-gestionada {
+  margin-top: 20px;
+  color: #9a9ac0;
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Mensaje de error */
+.ie-error {
+  background-color: rgba(161, 58, 58, 0.15);
+  border: 1px solid #a13a3a;
+  color: #ff8787;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 14px 0;
+}
+
+/* Mensaje de éxito, reemplaza al alert() */
+.ie-exito {
+  background-color: rgba(122, 216, 160, 0.15);
+  border: 1px solid #7ad8a0;
+  color: #7ad8a0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 14px 0;
+  text-align: center;
+}
+
+/* Mensaje  "Cargando..." */
+.ie-cargando {
+  color: #9a9ac0;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 60px;
+}

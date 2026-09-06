@@ -1,0 +1,76 @@
+/* JugadorEliminarModal.module.css */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.titulo {
+  margin-top: 0;
+  color: #1f2937;
+  font-size: 1.4rem;
+}
+
+.mensaje {
+  color: #4b5563;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+.acciones {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btnCancelar {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btnCancelar:hover:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+.btnEliminar {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btnEliminar:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.btnEliminar:disabled, .btnCancelar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

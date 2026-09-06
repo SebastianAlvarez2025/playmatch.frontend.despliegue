@@ -1,0 +1,196 @@
+/* Jugadores.module.css */
+.container {
+  padding: 15px; /* Ajustado para compactar el contenedor principal */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Tarjeta contenedora estilo cristal oscuro */
+.tablaWrapper {
+  background: rgba(25, 12, 44, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 16px; /* Más compacto */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  overflow-x: auto;
+}
+
+.headerTabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+  padding-bottom: 12px;
+}
+
+.titulo {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+}
+
+.btnCrear {
+  background-color: #9333ea; /* Morado eléctrico global */
+  color: white;
+  border: none;
+  padding: 6px 14px; /* Más compacto */
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.4);
+  transition: all 0.2s ease, transform 0.1s;
+}
+
+.btnCrear:hover {
+  background-color: #a855f7;
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.6);
+}
+
+.btnCrear:active {
+  transform: scale(0.98);
+}
+
+/* Estructura de la Tabla */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem; /* Letra compacta */
+  margin-bottom: 15px;
+}
+
+.tabla th {
+  background-color: #1a0b2e; /* Fondo oscuro uniforme */
+  color: #a78bfa; /* Morado claro para th */
+  font-weight: 600;
+  padding: 10px 14px;
+  border-bottom: 2px solid rgba(147, 51, 234, 0.3);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.tabla td {
+  padding: 8px 14px; /* Altura de celda ideal para la regla de 5 filas fijas */
+  border-bottom: 1px solid rgba(147, 51, 234, 0.1);
+  color: #ffffff;
+}
+
+/* Efecto cebra para las filas de jugadores */
+.tabla tbody tr:nth-of-type(even) {
+  background-color: rgba(35, 18, 60, 0.3);
+}
+
+/* Iluminación en hover */
+.tabla tbody tr:hover {
+  background-color: rgba(147, 51, 234, 0.15);
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+/* Botones de acción estilizados */
+.btnEditar {
+  background-color: rgba(59, 130, 246, 0.1); /* Azul sutil transparente */
+  color: #60a5fa;
+  border: 1px solid #3b82f6;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.btnEditar:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btnEliminar {
+  background-color: rgba(239, 68, 68, 0.1); /* Rojo sutil transparente */
+  color: #fca5a5;
+  border: 1px solid #ef4444;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.btnEliminar:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+.estadoText {
+  text-align: center;
+  color: #a78bfa;
+  padding: 20px 0;
+  font-style: italic;
+  opacity: 0.6;
+}
+/* Layout del Header y Controles del Módulo */
+.headerTabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.accionesSuperiores {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Caja de Búsqueda Modular */
+.cajaBuscarInterna {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 260px;
+}
+
+.cajaBuscarInterna input {
+  width: 100%;
+  padding: 7px 12px 7px 34px;
+  background: rgba(15, 8, 28, 0.6);
+  border: 0.5px solid rgba(147, 51, 234, 0.3);
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cajaBuscarInterna input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.cajaBuscarInterna input:focus {
+  border-color: #a855f7;
+  background: rgba(25, 12, 44, 0.8);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.iconoLupa {
+  position: absolute;
+  left: 10px;
+  font-size: 12px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cajaBuscarInterna input:focus + .iconoLupa {
+  opacity: 0.9;
+}

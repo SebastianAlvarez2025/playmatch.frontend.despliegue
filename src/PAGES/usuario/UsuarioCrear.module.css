@@ -1,0 +1,184 @@
+/* UsuarioCrear.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px; /* Optimización de espacio */
+  min-height: 70vh;
+  width: 100%;
+}
+
+.card {
+  background: #11081c; /* Tu fondo oscuro corporativo */
+  border: 1px solid #2d1b4e;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 620px; /* Angosto y elegante */
+}
+
+.titulo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 18px;
+  text-align: center;
+  border-bottom: 2px solid #2d1b4e;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+.form > div{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #b3a1cb;
+}
+
+.select, .input {
+  padding: 8px 12px; /* Caja de texto delgada */
+  background-color: #1a0f28;
+  border: 1px solid #3d2665;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.select option {
+  background-color: #1a0f28;
+  color: #ffffff;;
+}
+
+
+.select:focus, .input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.errorText {
+  grid-column: span 2;
+  color: #f87171;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+.actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row; /* Asegura flujo horizontal */
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.btnSubmit {
+ background-color: transparent;
+  color: #b3a1cb;
+  border: 1px solid #3d2665;
+}
+
+.btnSubmit:hover {
+  background-color: #25143a;
+  color: #ffffff;
+}
+
+.btnCancelar {
+  background-color: transparent;
+  color: #b3a1cb;
+  border: 1px solid #3d2665;
+}
+
+.btnCancelar:hover {
+  background-color: #25143a;
+  color: #ffffff;
+}
+
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  position: relative;
+  width: 100%;
+}
+
+.password-control {
+  padding-right: 45px; /* Evita que el texto tape el ojo */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%; /* Centrado vertical correcto */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9c7dff;
+  font-size: 18px;
+  transition: .2s;
+}
+
+.toggle-password:hover {
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* Tarjeta flotante de requisitos */
+.password-card {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 290px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(18, 12, 34, .98);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(123, 47, 247, .4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .45);
+  z-index: 999;
+  animation: fade .2s ease;
+}
+
+.password-card h4 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.password-card p {
+  margin: 6px 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.✔ { color: #3edb82; }
+.✖ { color: #ff7070; }

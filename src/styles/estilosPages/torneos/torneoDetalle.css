@@ -1,0 +1,69 @@
+/* CONTENEDOR */
+.detalle-container {
+  color: white;
+}
+
+/* HEADER */
+.detalle-header-1 {
+  background: #2b2b2b;
+  box-shadow: inset 0 0 40px rgb(1, 88, 69);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.torneo-subtitulo {
+  color: black;
+}
+
+.info {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/* NAV */
+.detalle-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.detalle-nav button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #415a77;
+  color: white;
+  transition: 0.3s;
+}
+
+.detalle-nav button:hover {
+  background: #00b4d8;
+}
+
+/* MAIN */
+.detalle-main {
+  background: #2b2b2b;
+  box-shadow: inset 0 0 40px rgb(1, 88, 69);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.detalle-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.data-detalle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

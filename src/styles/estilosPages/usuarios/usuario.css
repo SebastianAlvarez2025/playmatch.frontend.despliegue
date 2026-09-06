@@ -1,0 +1,101 @@
+.usuarios-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-box-usuario {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+  color: white;
+}
+
+/* TITULO */
+.titulo {
+  text-align: center;
+  color: #222;
+}
+
+/* FORM */
+.form-usuarios {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-usuarios input {
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(48, 47, 47, 0.1);
+  transition: 0.3s;
+  color: rgb(250, 249, 249);
+  font-size: 18px;
+}
+
+.form-usuarios button {
+  grid-column: span 4;
+  padding: 10px;
+  background: #2563eb;
+  color: rgba(249, 246, 246, 0.619);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(253, 252, 252);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-usuarios th {
+  background: #111827;
+  color: white;
+  padding: 10px;
+}
+
+.tabla-usuarios td {
+  padding: 10px;
+  color: black;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.editar {
+  background: #f59e0b;
+  color: white;
+}
+
+.editar:hover {
+  background: #d97706;
+}
+
+.eliminar {
+  background: #ef4444;
+  color: white;
+}
+
+.eliminar:hover {
+  background: #b91c1c;
+}

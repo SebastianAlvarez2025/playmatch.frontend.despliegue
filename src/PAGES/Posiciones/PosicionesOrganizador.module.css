@@ -1,0 +1,124 @@
+/* PosicionesOrganizador.module.css */
+.container {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tablaWrapper {
+  background: rgba(35, 18, 60, 0.3);
+  border-radius: 12px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.headerTabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+}
+
+.titulo {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  color: #10b981; /* Un tono verde deportivo distintivo para la vista de organizador */
+  margin: 6px 0 0 0;
+  font-weight: 500;
+}
+
+.btnActualizar {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnActualizar:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.btnActualizar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.tabla th {
+  background-color: rgba(35, 18, 60, 0.3);
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.tabla td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+.tabla tbody tr:hover {
+  background-color: rgba(35, 18, 60, 0.3);
+}
+
+.filaLider {
+  background-color: rgba(
+    16,
+    185,
+    129,
+    0.04
+  ); /* Fondo sutil verde para el puntero */
+}
+
+.puesto {
+  font-weight: 600;
+  color: #64748b;
+  width: 40px;
+}
+
+.equipo {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.puntos {
+  font-weight: 700;
+  color: #fff;
+  background-color: rgba(35, 18, 60, 0.3);
+}
+
+.cargandoText {
+  text-align: center;
+  color: #64748b;
+  padding: 40px 0;
+  font-style: italic;
+}

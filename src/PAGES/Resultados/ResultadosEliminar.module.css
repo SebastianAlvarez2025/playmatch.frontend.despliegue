@@ -1,0 +1,122 @@
+/* ResultadosEliminar.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: calc(100vh - 120px);
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 32px;
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  border-top: 4px solid #ef4444; /* Línea roja de advertencia */
+}
+
+.iconoAdvertencia {
+  font-size: 3rem;
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.titulo {
+  font-size: 1.4rem;
+  color: #1f2937;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.subtitulo {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.resumenPartido {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 28px;
+}
+
+.infoId {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.marcadorBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.goles {
+  background: #f3f4f6;
+  padding: 6px 14px;
+  border-radius: 6px;
+  min-width: 24px;
+}
+
+.vs {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btnDelete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btnDelete:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.btnDelete:disabled {
+  background-color: #fca5a5;
+  cursor: not-allowed;
+}
+
+.btnCancelar {
+  background-color: #e5e7eb;
+  color: #374151;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btnCancelar:hover {
+  background-color: #d1d5db;
+}

@@ -1,0 +1,157 @@
+/* InscripcionesEquiposOrganizador.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 1.4rem;
+  color: #1f2937;
+  font-weight: 700;
+  margin: 0;
+}
+
+.filtroContenedor {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.btnFiltro {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #d1d5db;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  transition: all 0.2s ease;
+}
+
+.btnFiltro:hover {
+  background-color: #e5e7eb;
+}
+
+.btnActivo {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.btnActivo:hover {
+  background-color: #1d4ed8;
+}
+
+.loading, .emptyState {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+  padding: 20px 0;
+}
+
+.tarjetaInscripcion {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f3f4f6;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.partidoInfo {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.nombreTorneo, .nombreEquipo {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.labelEstado {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.valorEstado {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Variaciones de color para estados visuales rápidos */
+.tarjetaInscripcion :global(.Pendiente) {
+  color: #d97706;
+  background-color: #fef3c7;
+}
+
+.tarjetaInscripcion :global(.Inscrito) {
+  color: #16a34a;
+  background-color: #dcfce7;
+}
+
+.metaData {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btnAccion {
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btnAceptar {
+  background-color: #10b981;
+  color: white;
+}
+
+.btnAceptar:hover {
+  background-color: #059669;
+}
+
+.btnRechazar {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btnRechazar:hover {
+  background-color: #dc2626;
+}
+
+.btnRevertir {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btnRevertir:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}

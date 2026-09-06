@@ -1,0 +1,269 @@
+
+.equipo-escudo-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #366091;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  user-select: none;
+  margin-bottom: 14px;
+  border: 2px solid #3a3a55;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin: 0 auto 10px auto;
+
+}
+
+.equipos-page {
+  padding: 30px 40px;
+  color: #ffffff;
+}
+
+.equipos-page h1 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+/* Barra superior: buscador + botón de crear equipo */
+.equipos-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.equipos-toolbar input[type="text"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #3a3a55;
+  background-color: #22223a;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.equipos-toolbar input[type="text"]::placeholder {
+  color: #9a9ab5;
+}
+
+.equipos-toolbar input[type="text"]:focus {
+  border-color: #366091;
+}
+
+/* Botón "+ Crear Equipo" */
+.btn-crear {
+  background-color: #366091;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.btn-crear:hover {
+  background-color: #2b4d73;
+}
+
+/* Mensajes de estado (cargando / error / sin resultados) */
+.equipos-page p {
+  color: #c8c8e0;
+  font-size: 15px;
+}
+
+.equipos-page p.error {
+  color: #ff6b6b;
+}
+
+/* Grid de tarjetas de equipos */
+.equipos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta individual de cada equipo */
+.equipo-card {
+  background-color: #22223a;
+  border: 1px solid #3a3a55;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.equipo-card:hover {
+  transform: translateY(-4px);
+  border-color: #366091;
+}
+
+.equipo-escudo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #1a1a2e;
+  margin-bottom: 14px;
+  border: 2px solid #366091;
+}
+
+.equipo-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.equipo-card p {
+  font-size: 13px;
+  color: #9a9ab5;
+  margin-bottom: 14px;
+}
+
+/* Botones de Editar / Desactivar / Inscribir / Ver Jugadores
+   dentro de la tarjeta */
+.equipo-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.equipo-acciones a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Editar  */
+.equipo-acciones a.btn-editar {
+  background-color: rgba(90, 155, 216, 0.12);
+  border-color: rgba(90, 155, 216, 0.4);
+  color: #8ab4e0;
+}
+
+.equipo-acciones a.btn-editar:hover {
+  background-color: rgba(90, 155, 216, 0.25);
+  border-color: #5a9bd8;
+  color: #ffffff;
+}
+
+/* Desactivar  */
+.equipo-acciones a.btn-desactivar {
+  background-color: rgba(200, 200, 224, 0.08);
+  border-color: rgba(200, 200, 224, 0.25);
+  color: #c8c8e0;
+}
+
+.equipo-acciones a.btn-desactivar:hover {
+  background-color: rgba(214, 107, 107, 0.18);
+  border-color: rgba(214, 107, 107, 0.5);
+  color: #ff9d9d;
+}
+
+/* Inscribir a Torneo  */
+.equipo-acciones a.btn-inscribir {
+  background-color: rgba(216, 178, 90, 0.12);
+  border-color: rgba(216, 178, 90, 0.4);
+  color: #e0c07a;
+}
+
+.equipo-acciones a.btn-inscribir:hover {
+  background-color: rgba(216, 178, 90, 0.25);
+  border-color: #d8b25a;
+  color: #ffffff;
+}
+
+/* Ver Jugadores , visible para todos */
+.equipo-acciones a.btn-ver-jugadores {
+  background-color: rgba(160, 120, 216, 0.12);
+  border-color: rgba(160, 120, 216, 0.4);
+  color: #b89ce0;
+}
+
+.equipo-acciones a.btn-ver-jugadores:hover {
+  background-color: rgba(160, 120, 216, 0.25);
+  border-color: #a078d8;
+  color: #ffffff;
+}
+
+/* ==========================================================
+   CLASE HEREDADAS (usadas en otras páginas del módulo Equipos,
+   como EquiposOrganizador.jsx, EquiposJugador.jsx, etc.)
+   Se mantienen para no romper esas vistas.
+   ========================================================== */
+.header-equipos {
+  margin-bottom: 20px;
+}
+
+.titulo-equipos {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.grid-equipos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.equipo-logo img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  background: white;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.equipo-info h3 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.equipo-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 50px;
+  color: #94a3b8;
+}
+/*
+.btn-inscribir-equipo,
+.btn-ver-jugadores,
+.btn-ver-torneo,
+.btn-solicitudes {
+  padding: 3px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #366091;
+  margin-bottom: 10px;
+  cursor: pointer;
+}*/

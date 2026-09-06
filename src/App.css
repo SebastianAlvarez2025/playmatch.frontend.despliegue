@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0; /* Cambiado a 0 general para limpiar los lados también */
+  background: #090012f5;
+  background-attachment: fixed;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  
+  /* --- AJUSTES CLAVE PARA PANTALLA FIJA --- */
+  max-width: 100vw;       /* Fuerza al body a medir exactamente el ancho de la pantalla */
+  min-height: 100vh;      /* Fuerza al body a medir exactamente el alto de la pantalla */
+  overflow-x: hidden;   /* Desactiva por completo el scroll horizontal */
+  overflow-y: auto;     /* Permite scroll vertical si el contenido excede la altura */
+}

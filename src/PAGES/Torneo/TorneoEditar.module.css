@@ -1,0 +1,180 @@
+/* TorneoEditar.module.css */
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px; /* Optimización de espacio */
+  min-height: 70vh;
+  width: 100%;
+}
+
+.cardBox {
+  background: #11081c; /* Tu fondo oscuro corporativo */
+  border: 1px solid #2d1b4e;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 620px; /* Angosto y elegante */
+}
+
+.titulo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 18px;
+  text-align: center;
+  border-bottom: 2px solid #2d1b4e;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Formulario distribuido en 2 columnas con CSS Grid */
+.formGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+/* Agrupador de label e input de forma vertical */
+.formGroup > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Forzar que si hay algún mensaje de error general ocupe las dos columnas */
+.errorMsg {
+  grid-column: span 2;
+  color: #f87171;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #b3a1cb;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 8px 12px; /* Caja de texto delgada */
+  background-color: #1a0f28;
+  border: 1px solid #3d2665;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo para las opciones del desplegable nativo */
+.formGroup select option {
+  background-color: #1a0f28;
+  color: #ffffff;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Contenedor inferior para enviar y cancelar alineados a la derecha */
+.btnActions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row; /* Asegura flujo horizontal */
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Botones estándar */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.btnSubmit {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btnSubmit:hover {
+  background-color: #1d4ed8;
+}
+
+.btnSubmit:active {
+  transform: scale(0.98);
+}
+
+.btnCancel {
+  background-color: transparent;
+  color: #b3a1cb;
+  border: 1px solid #3d2665;
+}
+
+.btnCancel:hover {
+  background-color: #25143a;
+  color: #ffffff;
+}
+
+/* Diseño responsivo para celulares */
+@media (max-width: 650px) {
+  .formGroup {
+    grid-template-columns: 1fr;
+  }
+  
+  .btnActions {
+    grid-column: span 1;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Badges para Estado de Etapa y Actividad */
+.badgeEstado {
+  background-color: #2a1b4e;
+  color: #c084fc;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid #3d2665;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.statusActivo {
+  color: #4ade80;
+  background-color: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.statusInactivo {
+  color: #f87171;
+  background-color: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}

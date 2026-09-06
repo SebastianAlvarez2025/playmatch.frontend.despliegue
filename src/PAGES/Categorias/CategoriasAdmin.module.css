@@ -1,0 +1,284 @@
+/* Categorias.module.css */
+
+.torneosContainer {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contenedor estilo cristal con fondo morado ultra oscuro */
+.tablaContainer {
+  width: 100%;
+  max-width: 100%;
+  background: rgba(25, 12, 44, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  overflow-x: auto;
+}
+
+/* Encabezado */
+.torneosHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+  padding-bottom: 12px;
+}
+
+.titulo {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+}
+
+/* Acciones superiores y buscador */
+.accionesSuperiores {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cajaBuscarInterna {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 240px;
+}
+
+.cajaBuscarInterna input {
+  width: 100%;
+  padding: 7px 12px 7px 34px;
+  background: rgba(15, 8, 28, 0.6);
+  border: 0.5px solid rgba(147, 51, 234, 0.3);
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cajaBuscarInterna input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.cajaBuscarInterna input:focus {
+  border-color: #a855f7;
+  background: rgba(25, 12, 44, 0.8);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.iconoLupa {
+  position: absolute;
+  left: 10px;
+  font-size: 12px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cajaBuscarInterna input:focus + .iconoLupa {
+  opacity: 0.9;
+}
+
+/* Base de Botones Estilizados */
+.btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.crear {
+  background-color: #9333ea;
+  color: white;
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.4);
+}
+.crear:hover {
+  background-color: #a855f7;
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.6);
+}
+
+.editar {
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid #f59e0b;
+  color: #fbbf24;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+}
+.editar:hover {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.eliminar {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+}
+.eliminar:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Estilos de la Tabla Compacta */
+.tablaTorneos {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+
+.tablaTorneos th {
+  background-color: #1a0b2e;
+  color: #a78bfa;
+  padding: 10px 14px;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(147, 51, 234, 0.3);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.tablaTorneos td {
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(147, 51, 234, 0.1);
+  color: #ffffff;
+}
+
+/* Efecto cebra para las filas */
+.tablaTorneos tbody tr:nth-of-type(even) {
+  background-color: rgba(35, 18, 60, 0.3);
+}
+
+/* Hover iluminado sutil */
+.tablaTorneos tbody tr:hover {
+  background-color: rgba(147, 51, 234, 0.15);
+}
+
+/* Badges de Categoría y Estado */
+.badgeCategoria {
+  display: inline-block;
+  background-color: rgba(147, 51, 234, 0.15);
+  color: #c084fc;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badgeEstado {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.badgeEstado.activo {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badgeEstado.inactivo {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.formLabel {
+  color: #a78bfa;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.formInput {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(15, 8, 28, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.formInput:focus {
+  border-color: #a855f7;
+  background: rgba(25, 12, 44, 0.8);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.formRow {
+  display: flex;
+  gap: 15px;
+}
+
+.formCheckboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.formCheckbox {
+  accent-color: #9333ea;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.formCheckboxLabel {
+  color: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.mensajeError {
+  color: #fca5a5;
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}

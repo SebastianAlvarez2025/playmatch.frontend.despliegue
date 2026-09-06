@@ -1,0 +1,145 @@
+.header-tabla {
+  margin-bottom: 10px;
+}
+
+.titulo-jornada {
+  color: rgb(201, 201, 201);
+  text-align: center;
+  margin: 20px;
+}
+
+.encuentro-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid rgb(1, 84, 77);
+  color: black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, rgb(0, 63, 39), rgb(1, 122, 76));
+}
+
+.fecha {
+  color: rgb(200, 199, 199);
+  width: 120px;
+  text-align: left;
+  margin-left: 150px;
+  margin-right: 70px;
+}
+
+.contenido {
+  flex: 1;
+  text-align: center;
+}
+
+.equipo-e {
+  width: 250px;
+  color: rgb(200, 199, 199);
+  font-weight: bold;
+  display: flex;
+}
+
+.eql {
+  margin-left: auto;
+}
+
+.vs {
+  margin-right: -5px;
+  width: 20px;
+}
+
+.lugar-e {
+  text-align: center;
+  width: 520px;
+}
+
+.partido {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  width: 520px;
+}
+
+.name-equipo {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.lugar {
+  color: rgba(0, 0, 0, 0.642);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hora {
+  color: rgb(200, 199, 199);
+  width: 120px;
+  text-align: right;
+}
+
+.contenedor-card-encuentro {
+  display: flex;
+  flex-direction: row;
+  background-color: aliceblue;
+}
+
+.btn-crear-e {
+  width: 110px;
+  height: 30px;
+  color: white;
+  border-radius: 7px;
+  border-color: green;
+  background-color: green;
+}
+
+.btn-crear-e:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 rgba(6, 6, 6, 0.9);
+}
+
+.btn-crear-auto {
+  width: 150px;
+  height: 30px;
+  color: white;
+  margin-right: 10px;
+  border-radius: 7px;
+  border-color: rgb(2, 70, 64);
+  background-color: rgb(118, 19, 2);
+}
+
+.btn-crear-auto:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 rgba(6, 6, 6, 0.9);
+}
+
+.btn-editar-e {
+  width: 80px;
+  height: 30px;
+  color: white;
+  border-radius: 7px;
+  border-color: rgb(57, 57, 255);
+  background-color: rgb(57, 57, 255);
+}
+
+.btn-editar-e:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 rgba(6, 6, 6, 0.9);
+}
+
+.btn-eliminar-e {
+  width: 80px;
+  height: 30px;
+  color: white;
+  border-radius: 7px;
+  border-color: red;
+  background-color: red;
+}
+
+.btn-eliminar-e:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 rgba(6, 6, 6, 0.9);
+}

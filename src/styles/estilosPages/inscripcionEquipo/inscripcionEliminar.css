@@ -1,0 +1,99 @@
+/* ==========================================================
+   RETIRAR SOLICITUD DE INSCRIPCIÓN
+   
+   ========================================================== */
+
+.inscripcion-eliminar-page {
+  max-width: 480px;
+  margin: 60px auto;
+  background-color: #22223a;
+  border: 1px solid #3a3a55;
+  border-radius: 16px;
+  padding: 40px 38px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.inscripcion-eliminar-page h1 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.inscripcion-eliminar-page h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #a13a3a;
+  margin: 14px auto 28px auto;
+  border-radius: 4px;
+}
+
+.inscripcion-eliminar-page p {
+  font-size: 15px;
+  color: #d8d8ea;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.inscripcion-eliminar-page p strong {
+  color: #ffffff;
+}
+
+/* Mensaje de error */
+.inscripcion-eliminar-page .error {
+  background-color: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  color: #ff8787;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Botones de acción */
+.inscripcion-eliminar-page .acciones {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.inscripcion-eliminar-page .acciones button {
+  flex: 1;
+  padding: 13px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+/* Botón "Sí, retirar" -> rojo, acción destructiva */
+.inscripcion-eliminar-page .acciones button:first-child {
+  background-color: #a13a3a;
+  color: #ffffff;
+}
+
+.inscripcion-eliminar-page .acciones button:first-child:hover {
+  background-color: #7a2b2b;
+}
+
+/* Botón "Cancelar" -> neutro */
+.inscripcion-eliminar-page .acciones button:last-child {
+  background-color: #2b2b48;
+  border: 1px solid #3a3a55;
+  color: #c8c8e0;
+}
+
+.inscripcion-eliminar-page .acciones button:last-child:hover {
+  background-color: #34345a;
+  color: #ffffff;
+}
+
+.inscripcion-eliminar-page .acciones button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

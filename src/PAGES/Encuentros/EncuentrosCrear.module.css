@@ -1,0 +1,123 @@
+/* EncuentrosCrear.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formularioCard {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 32px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.titulo {
+  font-size: 1.6rem;
+  color: #1f2937;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  text-align: center;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 12px;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grupoCampo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.input,
+.select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  outline: none;
+  background-color: #ffffff;
+  color: black;
+  transition: border-color 0.2s;
+}
+
+.select option {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #2563eb;
+}
+
+.inputDisabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.errorText {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.contenedorBotones {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.btnSubmit {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btnSubmit:hover {
+  background-color: #1d4ed8;
+}
+
+.btnCancelar {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.btnCancelar:hover {
+  background-color: #d1d5db;
+}

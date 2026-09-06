@@ -1,0 +1,146 @@
+/* TorneoCrear.module.css */
+.crearContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px; /* Reducido para optimizar espacio */
+  min-height: 70vh;
+  width: 100%;
+}
+
+.formCard {
+  background: #11081c;
+  border: 1px solid #2d1b4e;
+  border-radius: 10px; /* Bordes un toque más finos */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 20px 24px; /* Relleno interno reducido para compactar el recuadro */
+  width: 100%;
+  max-width: 620px; /* Reducido de 750px a 620px para hacerlo más angosto */
+}
+
+.titulo {
+  font-size: 1.5rem; /* Reducido de 1.8rem a 1.5rem */
+  color: #ffffff;
+  margin-bottom: 18px; /* Menos separación inferior */
+  text-align: center;
+  border-bottom: 2px solid #2d1b4e;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Formulario distribuido a lo ancho con CSS Grid */
+.formTorneo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px; /* Espacio entre inputs reducido de 20px a 14px */
+}
+
+/* Agrupador de label e input */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Ajustado de 8px a 6px */
+}
+
+.formLabel {
+  font-weight: 600;
+  font-size: 0.85rem; /* Letra ligeramente más chica */
+  color: #b3a1cb;
+}
+
+.formInput,
+.formSelect {
+  padding: 8px 12px; /* Caja de texto más delgada (de 12px a 8px de alto) */
+  background-color: #1a0f28;
+  border: 1px solid #3d2665;
+  border-radius: 6px;
+  font-size: 0.95rem; /* Ajuste sutil de tamaño de fuente */
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+/* Estilo para las opciones del desplegable nativo */
+.formSelect option {
+  background-color: #1a0f28;
+  color: #ffffff;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.errorMsg {
+  color: #f87171;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+/* Contenedor inferior para enviar y cancelar alineados a la derecha */
+.actionsContainer {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Botones más juntos */
+  margin-top: 6px;
+}
+
+/* Botones */
+.btnSubmit {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px; /* Botones un poco más pequeños */
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btnSubmit:hover {
+  background-color: #1d4ed8;
+}
+
+.btnSubmit:active {
+  transform: scale(0.98);
+}
+
+.btnCancelar {
+  background-color: transparent;
+  color: #b3a1cb;
+  padding: 10px 20px; /* Botones un poco más pequeños */
+  border: 1px solid #3d2665;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btnCancelar:hover {
+  background-color: #25143a;
+  color: #ffffff;
+}
+
+/* Diseño responsivo para celulares */
+@media (max-width: 650px) {
+  .formTorneo {
+    grid-template-columns: 1fr;
+  }
+  
+  .actionsContainer {
+    grid-column: span 1;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .btnSubmit, .btnCancelar {
+    width: 100%;
+    text-align: center;
+  }
+}

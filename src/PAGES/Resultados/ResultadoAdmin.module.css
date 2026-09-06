@@ -1,0 +1,210 @@
+/* ResultadoAdmin.module.css */
+.container {
+  padding: 15px; /* Reducido para evitar el scroll vertical en el layout */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Tarjeta contenedora estilo cristal oscuro */
+.tablaContainer {
+  background: rgba(25, 12, 44, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 16px; /* Más compacto */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+}
+
+.headerTabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.titulo {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+}
+
+.btnCrear {
+  background-color: #9333ea; /* Morado eléctrico global */
+  color: white;
+  border: none;
+  padding: 6px 14px; /* Más compacto */
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.4);
+  transition: all 0.2s ease, transform 0.1s;
+}
+
+.btnCrear:hover {
+  background-color: #a855f7;
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.6);
+}
+
+.btnCrear:active {
+  transform: scale(0.98);
+}
+
+.tableResponsive {
+  overflow-x: auto;
+  margin-bottom: 15px;
+}
+
+/* Estructura de la Tabla */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.tabla th {
+  background-color: #1a0b2e; /* Fondo oscuro unificado */
+  color: #a78bfa; /* Morado claro para th */
+  font-weight: 600;
+  padding: 10px 14px;
+  border-bottom: 2px solid rgba(147, 51, 234, 0.3);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.tabla td {
+  padding: 8px 14px; /* Altura optimizada para las 5 filas fijas */
+  border-bottom: 1px solid rgba(147, 51, 234, 0.1);
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+/* Efecto cebra para las filas */
+.tabla tr:nth-of-type(even) td {
+  background-color: rgba(35, 18, 60, 0.3);
+}
+
+.tabla tr:hover td {
+  background-color: rgba(147, 51, 234, 0.15);
+}
+
+/* 📊 Marcador estilo pantalla electrónica */
+.marcador {
+  font-weight: 700;
+  color: #34d399; /* Verde neón para los goles */
+  background-color: rgba(9, 0, 18, 0.6);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: monospace; /* Estilo marcador digital */
+  letter-spacing: 1px;
+  box-shadow: 0 0 6px rgba(52, 211, 153, 0.2);
+}
+
+.accionesGroup {
+  display: flex;
+  gap: 8px;
+}
+
+/* Botones de acción compactos */
+.btnAction {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnEditar {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border: 1px solid #3b82f6;
+}
+
+.btnEditar:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btnEliminar {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border: 1px solid #ef4444;
+}
+
+.btnEliminar:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+.noDataText {
+  text-align: center;
+  color: #a78bfa;
+  padding: 24px;
+  font-style: italic;
+  opacity: 0.6;
+}
+/* Contenedor flexible del encabezado */
+.headerTabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.accionesSuperiores {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Buscador interno */
+.cajaBuscarInterna {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 260px;
+}
+
+.cajaBuscarInterna input {
+  width: 100%;
+  padding: 7px 12px 7px 34px;
+  background: rgba(15, 8, 28, 0.6);
+  border: 0.5px solid rgba(147, 51, 234, 0.3);
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cajaBuscarInterna input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.cajaBuscarInterna input:focus {
+  border-color: #a855f7;
+  background: rgba(25, 12, 44, 0.8);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.iconoLupa {
+  position: absolute;
+  left: 10px;
+  font-size: 12px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cajaBuscarInterna input:focus + .iconoLupa {
+  opacity: 0.9;
+}

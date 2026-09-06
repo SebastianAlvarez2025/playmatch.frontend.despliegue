@@ -1,0 +1,162 @@
+/* ✨ EncuentrosEditar.module.css - Estilo oscuro y morado de Play Match */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formularioCard {
+  background: rgba(30, 27, 46, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 32px;
+  width: 100%;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+.titulo {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+  padding-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grupoCampo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.input,
+.select {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.95rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.select option {
+  background-color: #1e1b2e;
+  color: #ffffff;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #9333ea;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.inputDisabled {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+}
+
+.errorText {
+  color: #fca5a5;
+  font-size: 0.85rem;
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contenedorBotones {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btnSubmit {
+  background-color: #9333ea;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(147, 51, 234, 0.4);
+}
+
+.btnSubmit:hover {
+  background-color: #7e22ce;
+  transform: translateY(-1px);
+}
+
+.btnSubmit:disabled {
+  background-color: rgba(147, 51, 234, 0.4);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btnCancelar {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btnCancelar:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.btnCancelar:disabled {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  font-weight: 500;
+}

@@ -1,0 +1,158 @@
+/* ==========================================================
+    PÁGINA "MIS INSCRIPCIONES" (vista del DT)
+
+   ========================================================== */
+
+.inscripciones-page {
+  padding: 30px 40px;
+  color: #ffffff;
+}
+
+.inscripciones-page h1 {
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+
+.inscripciones-page > p {
+  color: #c8c8e0;
+  font-size: 15px;
+}
+
+.inscripciones-page p.error {
+  color: #ff6b6b;
+}
+
+/* Un bloque de tarjeta por cada equipo */
+.equipo-inscripciones-bloque {
+  background-color: #22223a;
+  border: 1px solid #3a3a55;
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+/* Encabezado: escudo,nombre,botón de inscribir */
+.equipo-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.equipo-header img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #366091;
+  background-color: #1a1a2e;
+}
+
+.equipo-header h2 {
+  font-size: 20px;
+  margin: 0;
+  flex: 1;
+}
+
+.equipo-header a {
+  background-color: rgba(216, 178, 90, 0.12);
+  border: 1px solid rgba(216, 178, 90, 0.4);
+  color: #e0c07a;
+  padding: 9px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.equipo-header a:hover {
+  background-color: rgba(216, 178, 90, 0.25);
+  border-color: #d8b25a;
+  color: #ffffff;
+}
+
+/* Mensaje cuando el equipo no tiene inscripciones */
+.equipo-inscripciones-bloque > p {
+  color: #9a9ab5;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Tabla de inscripciones */
+.tabla-inscripciones {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla-inscripciones thead th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #7d9bc4;
+  padding: 10px 12px;
+  border-bottom: 2px solid #3a3a55;
+}
+
+.tabla-inscripciones tbody td {
+  padding: 12px;
+  font-size: 14px;
+  color: #e0e0f0;
+  border-bottom: 1px solid #2c2c48;
+}
+
+.tabla-inscripciones tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-inscripciones tbody tr:hover {
+  background-color: rgba(90, 155, 216, 0.05);
+}
+
+/* Badges de estado */
+.tabla-inscripciones .estado-pendiente,
+.tabla-inscripciones .estado-inscrito,
+.tabla-inscripciones .estado-cancelado {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.tabla-inscripciones .estado-pendiente {
+  background-color: rgba(216, 178, 90, 0.15);
+  color: #e0c07a;
+  border: 1px solid rgba(216, 178, 90, 0.4);
+}
+
+.tabla-inscripciones .estado-inscrito {
+  background-color: rgba(90, 200, 130, 0.15);
+  color: #7ad8a0;
+  border: 1px solid rgba(90, 200, 130, 0.4);
+}
+
+.tabla-inscripciones .estado-cancelado {
+  background-color: rgba(214, 107, 107, 0.15);
+  color: #ff9d9d;
+  border: 1px solid rgba(214, 107, 107, 0.4);
+}
+
+/* Link "Retirar solicitud" */
+.tabla-inscripciones td a {
+  color: #ff9d9d;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.tabla-inscripciones td a:hover {
+  border-bottom-color: #ff9d9d;
+}

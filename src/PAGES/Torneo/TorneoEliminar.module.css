@@ -1,0 +1,105 @@
+/* ✨ TorneoEliminar.module.css - Adaptado al diseño oscuro de Play Match */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: calc(100vh - 100px);
+}
+
+.card {
+  background: rgba(30, 27, 46, 0.7); /* Fondo oscuro translúcido */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(147, 51, 234, 0.2); /* Borde morado sutil */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 32px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.infoPreview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.infoPreview input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6); /* Texto de lectura claro pero tenue */
+  background-color: rgba(255, 255, 255, 0.05); /* Entrada oscurecida */
+  cursor: not-allowed;
+  box-sizing: border-box;
+}
+
+.advertenciaBox {
+  background-color: rgba(239, 68, 68, 0.1); /* Fondo rojo muy sutil */
+  border-left: 4px solid #ef4444; /* Borde rojo vivo de peligro */
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.advertenciaText {
+  color: #fca5a5; /* Texto rojo pastel legible sobre oscuro */
+  text-align: center;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btnConfirmar {
+  background-color: #dc2626; /* Rojo de destrucción */
+  color: white;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);
+}
+
+.btnConfirmar:hover {
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.btnCancelar {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btnCancelar:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}

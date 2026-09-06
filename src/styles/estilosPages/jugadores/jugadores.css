@@ -1,0 +1,763 @@
+/* ===================================================================
+   Jugadores.css
+   Estilos de la pantalla "Plantilla del equipo" (JugadoresEquipo.jsx)
+   y de los formularios de Jugadores (Crear/Editar/Eliminar)
+  
+=================================================================== */
+
+/* ---------- CONTENEDOR GENERAL DE LA PÁGINA ---------- */
+.detalle-container {
+  padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ---------- ENCABEZADO: escudo,nombre,datos del equipo ---------- */
+.detalle-header-1 {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(25, 12, 44, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(147, 51, 234, 0.2);
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(6px);
+    box-sizing: border-box;
+    margin-bottom: 24px
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.titulo {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+}
+
+/* Fila con el escudo a la izquierda y la info a la derecha */
+.data-detalle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.data-detalle img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #3a3a55;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info p {
+  margin: 0;
+  color: #d0d0e0;
+}
+
+/* Etiquetas como "Capitán:", "Jugadores registrados:" */
+.torneo-subtitulo strong{
+  color: #a78bfa;
+}
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+.detalle-main {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(25, 12, 44, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+}
+
+/* Barra con el título "Plantilla del equipo" y el botón de registrar */
+.jugadores-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.jugadores-toolbar h2 {
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Botón dorado de acción "positiva" (Registrar Jugador) */
+.btn-inscribir-equipo {
+  background: linear-gradient(135deg, #d8b25a, #e0c07a) !important;
+  color: #1a1a2e !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 18px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s;
+}
+
+.btn-inscribir-equipo:hover {
+  opacity: 0.85;
+}
+
+/* ---------- GRID DE TARJETAS DE JUGADORES ---------- */
+.contenedor-jugadores-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+/* Tarjeta individual de un jugador */
+.jugador-card {
+  background: rgba(25, 12, 44, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.25);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Círculo con el número de camiseta */
+.jugador-camiseta {
+  min-width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #35235a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* ==========================================================
+   Nombre, goles y tarjetas del jugador
+   RENOMBRADO: de ".jugador-info" a ".jugador-info-plantilla"
+   porque "jugador-info" también existe en cronologias.css
+   (módulo de Cronologías) y, al ser CSS global (no CSS
+   Modules), esa otra regla pisaba este estilo y ponía la
+   tarjeta blanca al pasar el mouse (hover).
+   ========================================================== */
+.jugador-info-plantilla {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.jugador-nombre {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.jugador-dato {
+  color: #a0a0c0;
+  font-size: 13px;
+}
+
+/* Botones de Editar / Desactivar */
+.jugador-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.btn-editar-jugador {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid rgba(160, 120, 216, 0.4);
+    background-color: rgba(160, 120, 216, 0.12);
+    color: #b89ce0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-editar-jugador:hover {
+  background: #c79ef0f4 !important;
+}
+
+.btn-desactivar-jugador {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    background-color: rgba(214, 107, 107, 0.18);
+    border-color: rgba(214, 107, 107, 0.5);
+    color: #ff9d9d;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+}
+
+.btn-desactivar-jugador:hover {
+  background: #f54c4c !important;
+  color: white;
+}
+
+/* ===================================================================
+   FORMULARIOS DE JUGADORES (Crear / Editar / Eliminar)
+=================================================================== */
+
+/* Contenedor del formulario: cada campo apilado, con espacio */
+.form-jugador {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-jugador label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #7d9bc4;
+  margin-top: 14px;
+}
+
+.form-jugador input[type="text"],
+.form-jugador input[type="number"],
+.form-jugador select {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #3a3a55;
+  background-color: #171727;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-jugador input[type="text"]:focus,
+.form-jugador input[type="number"]:focus,
+.form-jugador select:focus {
+  border-color: #5a9bd8;
+}
+
+/* Mensajes de éxito y error dentro del formulario */
+.mensaje-exito {
+  background-color: rgba(90, 200, 130, 0.12);
+  border: 1px solid rgba(90, 200, 130, 0.4);
+  color: #7ad8a0;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.mensaje-error {
+  background-color: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  color: #ff8787;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Fila de botones al final del formulario */
+.form-botones {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.form-botones button {
+  flex: 1;
+}
+
+/* ---------- BUSCADOR DE JUGADOR ---------- */
+
+/* Contenedor relativo: necesario para que la lista de sugerencias
+   se posicione justo debajo del input */
+.buscador-jugador {
+  position: relative;
+}
+
+.buscador-jugador input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Lista desplegable de sugerencias */
+.lista-sugerencias {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: #171727;
+  border: 1.5px solid #3a3a55;
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.lista-sugerencias li {
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #e0e0f0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.lista-sugerencias li:hover {
+  background-color: rgba(90, 155, 216, 0.15);
+}
+
+.lista-sugerencias li.sugerencia-vacia {
+  color: #9a9ab5;
+  font-style: italic;
+  cursor: default;
+}
+
+.lista-sugerencias li.sugerencia-vacia:hover {
+  background-color: transparent;
+}
+
+/* ===================================================================
+   MI FICHA (rol Jugador) — vista de solo lectura
+   Reutiliza .detalle-container, .jugador-card, etc. de arriba.
+   Este bloque solo ajusta detalles propios de la vista de ficha.
+=================================================================== */
+
+/* En "Mi Ficha" el header no tiene escudo, solo el título,
+   así que le bajamos el margen inferior al h1 */
+.detalle-header-1 h1 {
+  padding-bottom: 0;
+}
+
+/* La ficha es una sola tarjeta, se ve mejor si no se estira
+   tanto en pantallas anchas */
+.contenedor-jugadores-card:has(.jugador-card:only-child) {
+  grid-template-columns: minmax(260px, 420px);
+}
+
+/* ===================================================================
+   MI FICHA — DASHBOARD (versión compacta, cabe en una sola vista,
+   sin scroll — ajustada al espacio real del <main> del layout)
+=================================================================== */
+
+.mificha-container {
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mificha-titulo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.mificha-subtitulo {
+  color: #c4b5fd;
+  font-size: 12px;
+  margin: 0 0 14px 0;
+}
+
+/* ─── Grid principal: perfil a la izquierda, contenido a la derecha ───
+   La columna del perfil se redujo de 250px a 190px para que la
+   tarjeta de datos del jugador se vea compacta, no estirada. ─── */
+.mificha-grid {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 14px;
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .mificha-container {
+    height: auto;
+    overflow: visible;
+  }
+  .mificha-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Tarjeta base morada ─── */
+.mificha-card {
+  background: linear-gradient(160deg, #2a1050 0%, #1e0b3a 100%);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.mificha-card-titulo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e9d5ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px 0;
+}
+
+/* ─── Tarjeta de perfil (columna izquierda) ───
+   Reducida: menos padding y ya no se estira a lo alto de la
+   columna derecha (no tiene sentido visual que sea tan grande). ─── */
+.mificha-perfil {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px;
+  align-self: start;
+}
+
+/* Avatar bajado de 90px a 64px, con número más pequeño acorde */
+.mificha-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  background: linear-gradient(135deg, #7e22ce, #c084fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  border: 2px solid #a855f7;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.mificha-nombre {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 2px 0;
+  text-transform: capitalize;
+}
+
+.mificha-equipo {
+  color: #c4b5fd;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.mificha-datos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.mificha-dato-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.mificha-dato-fila span:first-child {
+  color: #c4b5fd;
+}
+
+.mificha-dato-fila span:last-child {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ─── Columna derecha ─── */
+.mificha-columna-derecha {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+/* ─── Mis Torneos (mini cards) ─── */
+.mificha-torneos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.mificha-torneo-mini {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mificha-torneo-mini:hover {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: #a855f7;
+}
+
+.mificha-torneo-mini.activo {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: #a855f7;
+}
+
+.mificha-torneo-mini-nombre {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0 0 6px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mificha-torneo-mini-estado {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.mificha-torneo-mini-estado.inscrito {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+.mificha-torneo-mini-estado.otro {
+  background: rgba(234, 179, 8, 0.2);
+  color: #eab308;
+}
+
+/* ─── Tabla de posición ─── */
+.mificha-card-tabla {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.mificha-tabla-wrapper {
+  overflow: auto;
+  flex: 1;
+}
+
+.mificha-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.mificha-tabla thead th {
+  text-align: left;
+  padding: 6px 10px;
+  color: #c4b5fd;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.25);
+  position: sticky;
+  top: 0;
+  background: #1e0b3a;
+}
+
+.mificha-tabla tbody td {
+  padding: 6px 10px;
+  color: #e9e4f5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mificha-tabla tbody tr.fila-mi-equipo {
+  background: rgba(168, 85, 247, 0.18);
+}
+
+.mificha-tabla tbody tr.fila-mi-equipo td:first-child {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ─── Fila inferior: Próximos / Últimos / Rendimiento ─── */
+.mificha-fila-inferior {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.mificha-card-mini {
+  padding: 10px 14px;
+}
+
+/* ─── Estado vacío / próximamente ─── */
+.mificha-vacio {
+  color: #a78bda;
+  font-size: 12px;
+  font-style: italic;
+  padding: 6px 0;
+}
+
+.mificha-proximamente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(233, 213, 255, 0.4);
+  font-size: 11px;
+  text-align: center;
+  border: 1px dashed rgba(168, 85, 247, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+}
+/* ===================================================================
+   PLANTILLA (rol Jugador) — vista de solo lectura
+   Cada compañero de equipo se muestra como una ficha individual,
+   reutilizando el mismo lenguaje visual de la tarjeta de perfil
+   de "Mi Ficha" (.mificha-card, .mificha-avatar, .mificha-dato-fila).
+=================================================================== */
+
+.plantilla-container {
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+}
+
+/* Grid responsivo: fichas de ancho fijo mínimo, se acomodan solas */
+.plantilla-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 14px;
+}
+
+/* Ficha individual del jugador — misma tarjeta morada de siempre */
+.plantilla-ficha {
+  background: linear-gradient(160deg, #2a1050 0%, #1e0b3a 100%);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 12px;
+  padding: 16px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border-color 0.15s ease;
+}
+
+.plantilla-ficha:hover {
+  border-color: #a855f7;
+}
+
+/* Avatar con el número de camiseta, mismo tamaño que en Mi Ficha */
+.plantilla-ficha-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  background: linear-gradient(135deg, #7e22ce, #c084fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  border: 2px solid #a855f7;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.45);
+}
+
+.plantilla-ficha-nombre {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  text-transform: capitalize;
+}
+
+.plantilla-ficha-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+  width: 100%;
+}
+/* ─── Lista de partidos (Próximos / Últimos), dentro de las
+   tarjetitas mini de la fila inferior ─── */
+.mificha-partidos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mificha-partido-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.mificha-partido-fecha {
+  color: #a78bda;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mificha-partido-equipos {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mificha-partido-marcador {
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 800;
+  align-self: flex-end;
+}
+
+/* ─── Rendimiento: reutiliza .mificha-dato-fila pero en un
+   contenedor propio para no chocar con .mificha-proximamente ─── */
+.mificha-rendimiento-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

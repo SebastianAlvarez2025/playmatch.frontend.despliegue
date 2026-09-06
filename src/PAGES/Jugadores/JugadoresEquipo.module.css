@@ -1,0 +1,222 @@
+/* JugadoresEquipo.module.css */
+.container {
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.btnVolver {
+  background: none;
+  border: none;
+  color: #4b5563;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.btnVolver:hover {
+  color: #111827;
+}
+
+/* Encabezado del Equipo */
+.headerPerfil {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .headerPerfil {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.escudoWrapper {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.escudo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.infoEquipo {
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .infoEquipo {
+    text-align: left;
+  }
+}
+
+.nombreEquipo {
+  font-size: 2rem;
+  margin: 0 0 12px 0;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.datosGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .datosGrid {
+    justify-content: flex-start;
+  }
+}
+
+.datoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.datoLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #93c5fd;
+}
+
+.datoValor {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.estadoBadge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  background-color: #10b981;
+  color: white;
+  font-weight: 600;
+}
+
+/* Sección de la Plantilla */
+.seccionTitulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.seccionTitulo h2 {
+  font-size: 1.4rem;
+  color: #1f2937;
+  margin: 0;
+  font-weight: 700;
+}
+
+.btnInscribir {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnInscribir:hover {
+  background-color: #1d4ed8;
+}
+
+/* Grid de Jugadores */
+.jugadoresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.jugadorCard {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.jugadorCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.jugadorInfoPrincipal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.jugadorNombre {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.jugadorPosicion {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.dorsalBox {
+  background-color: #f3f4f6;
+  color: #1e3a8a;
+  font-size: 1.25rem;
+  font-weight: 800;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.vacioText {
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  padding: 40px 0;
+  grid-column: 1 / -1;
+}
+
+.loadingText {
+  text-align: center;
+  color: #4b5563;
+  padding: 60px 0;
+  font-size: 1.1rem;
+}

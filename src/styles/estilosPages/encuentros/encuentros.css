@@ -1,0 +1,47 @@
+.btn-rechazar-i {
+  padding: 3px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: red;
+  margin-bottom: 10px;
+}
+
+.btn-aceptar-i {
+  padding: 3px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: blue;
+  margin-bottom: 10px;
+}
+
+.btn-pendiente {
+  padding: 3px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: red;
+  margin-bottom: 10px;
+}
+
+.btn-inscritos {
+  padding: 3px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(10, 112, 135);
+  margin-bottom: 10px;
+}
+
+.btn-aceptar {
+  padding: 3px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(10, 112, 135);
+  margin-bottom: 10px;
+}
+
+.btn-pendientes-i {
+  padding: 3px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(10, 112, 135);
+  margin-bottom: 10px;
+}

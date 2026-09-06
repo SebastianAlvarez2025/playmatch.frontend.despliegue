@@ -1,0 +1,128 @@
+h1 {
+  text-align: center;
+}
+
+.equipos-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 450px));
+  gap: 20px;
+  padding: 20px;
+}
+
+.equipo-card {
+  background: #c796ff00;
+  box-shadow: inset 0 0 40px rgba(231, 232, 232, 0);
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 415px;
+  height: 360px;
+  overflow: hidden;
+}
+
+.equipo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.9);
+}
+
+.equipo-title {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 29px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+.data-equipo {
+  display: flex;
+  flex-direction: column;
+  font-size: 19px;
+}
+
+.data-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .equipos-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.foot-data {
+  padding-left: 40px;
+  font-size: 19px;
+}
+
+.header-equipos {
+  margin-top: -20px;
+  margin-left: 40px;
+}
+
+strong {
+  color: rgba(0, 0, 0, 0.587);
+}
+
+.btn-crear {
+  height: 40px;
+  width: 80px;
+  background-color: rgb(4, 103, 3);
+  border-color: rgb(4, 103, 3);
+  color: white;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-crear:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 rgba(6, 6, 6, 0.9);
+}
+
+.acciones-card {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-editar {
+  width: 80px;
+  height: 30px;
+  color: white;
+  border-radius: 7px;
+  border-color: rgb(57, 57, 255);
+  background-color: rgb(57, 57, 255);
+}
+
+.btn-editar:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 rgba(6, 6, 6, 0.9);
+}
+
+.btn-eliminar {
+  width: 80px;
+  height: 30px;
+  color: white;
+  border-radius: 7px;
+  border-color: rgba(255, 0, 0, 0.715);
+  background-color: rgba(255, 0, 0, 0.715);
+}
+
+.btn-eliminar:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 rgba(6, 6, 6, 0.9);
+}
