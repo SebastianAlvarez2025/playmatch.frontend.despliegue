@@ -28,7 +28,6 @@ export default function Sidebar() {
       items: [
         {
           roles: [
-            ROLES.INVITADO,
             ROLES.ADMINISTRADOR,
             ROLES.ORGANIZADOR,
             ROLES.JUGADOR,
