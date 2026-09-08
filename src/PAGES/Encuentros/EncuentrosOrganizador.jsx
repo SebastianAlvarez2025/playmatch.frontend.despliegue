@@ -75,7 +75,7 @@ export default function Encuentros() {
       await cargarEncuentros();
     } catch (error) {
       console.error(error);
-      alert("Error al estructurar el fixture automático.");
+      alert(error);
     } finally {
       setLoading(false);
     }
